@@ -35,13 +35,10 @@ public class EventLoopClient {
                 .connect("localhost", 8989);
         // 不调用sync() 下面打印的channel [id: 0x435488cf]只包含id 说明么有建立好连接 数据发不出的
         // future.sync();
-        future.addListener(new ChannelFutureListener() {
-            @Override
-            public void operationComplete(ChannelFuture future) throws Exception {
-                final Channel channel = future.channel();
-                channel.writeAndFlush("宝贝");
-                log.debug("{}", channel);
-            }
+        future.addListener((ChannelFutureListener) future1 -> {
+            final Channel channel = future1.channel();
+            channel.writeAndFlush("宝贝");
+            log.debug("{}", channel);
         });
         // final Channel channel = future.channel();
         // channel.writeAndFlush("宝贝");

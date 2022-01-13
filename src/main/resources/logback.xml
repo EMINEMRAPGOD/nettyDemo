@@ -24,6 +24,9 @@
     <logger name="com.lyh.netty" level="DEBUG" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
+    <logger name="com.lyh.netty.netty.eventLoop.CloseFutureClient" level="DEBUG" additivity="true">
+        <appender-ref ref="STDOUT"/>
+    </logger>
     <!-- 用来控制查看那个类的日志内容（对mybatis name 代表命名空间） -->
     <!--单独指定某个包 进行日志输出-->
     <logger name="com" level="DEBUG" additivity="false"> <!--additivity =【true：反馈到<root 里面打印或者写出日志，false：不反馈】-->
