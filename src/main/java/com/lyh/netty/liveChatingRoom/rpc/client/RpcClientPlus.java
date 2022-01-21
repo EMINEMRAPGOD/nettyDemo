@@ -20,6 +20,8 @@ import io.netty.util.concurrent.DefaultPromise;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Proxy;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Future;
 
 /*
 CTRL + ALT + M 进行代码抽离封装

@@ -24,6 +24,7 @@ public class RpcRequestMessageHandler extends SimpleChannelInboundHandler<RpcReq
         response.setSequenceId(message.getSequenceId());
 
         try {
+
             // 上面对象里 获取【接口类】全限定名
             final Class<?> interfaceClazz = Class.forName(message.getInterfaceName());
             // 根据接口类 获取 【接口实现类】

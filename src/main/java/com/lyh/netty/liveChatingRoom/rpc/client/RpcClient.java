@@ -55,6 +55,8 @@ public class RpcClient {
                 if(!promise.isSuccess()){
                     Throwable cause = promise.cause();
                     log.error("error : ", cause);
+                }else{
+                    log.debug("rpc调用成功");
                 }
             });
 
